@@ -15,7 +15,7 @@ public class ClipboardTest : MonoBehaviour
         text.text = "我爱国！";
 
 #if UNITY_ANDROID
-  
+        //如果是安卓平台，获取当前正在执行的Activity
         activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
         if (activity == null)
             return ;
